@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'   // ← add this import
 
 export default defineConfig({
-  base: '/mihir-portfolio/',
+  // base: '/mihir-portfolio/',
 
   plugins: [react()],
 
