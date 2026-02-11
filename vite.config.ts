@@ -1,15 +1,21 @@
-import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
-import { inspectAttr } from 'kimi-plugin-inspect-react'
+// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { fileURLToPath, URL } from 'node:url'   // ← add this import
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: './',
-  plugins: [inspectAttr(), react()],
+  base: '/mihir-portfolio/',
+
+  plugins: [react()],
+
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
+      // Two common ways — pick one (I recommend the first)
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      
+      // or more explicit (sometimes helps with trailing slashes):
+      // '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // '@/': fileURLToPath(new URL('./src/', import.meta.url)),
+    }
+  }
+})
