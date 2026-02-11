@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# Mihir Pal Singh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Deployment to GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-## React Compiler
+### Quick Deploy Steps:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Create a new repository on GitHub**
+   - Go to [github.com](https://github.com)
+   - Create a new public repository named `mihir-portfolio`
 
-## Expanding the ESLint configuration
+2. **Push your code to GitHub**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial portfolio setup"
+   git remote add origin https://github.com/YOUR_USERNAME/mihir-portfolio.git
+   git push -u origin main
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. **Enable GitHub Pages**
+   - Go to your repository → Settings → Pages
+   - Under "Build and deployment", select **GitHub Actions**
+   - Save settings
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+4. **Your site will be live at:**
+   ```
+   https://YOUR_USERNAME.github.io/mihir-portfolio/
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Manual Deployment (Optional)
+
+```bash
+npm run deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 19** - UI Library
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool
+- **Tailwind CSS** - Styling
+- **Radix UI** - Accessible Components
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
 ```
+src/
+├── components/
+│   ├── sections/      # Page sections (Hero, About, Projects, etc.)
+│   ├── ui/            # Reusable UI components
+│   └── Navigation.tsx
+├── data/
+│   └── portfolioData.ts  # Portfolio content configuration
+├── hooks/
+├── lib/
+└── App.tsx
+```
+
+## 🏃‍♂️ Running Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📝 Updating Portfolio Content
+
+Edit [`src/data/portfolioData.ts`](src/data/portfolioData.ts) to customize:
+
+- Personal information
+- About section
+- Experience
+- Education
+- Skills
+- Projects
+- Contact details
+
+---
+
+Built with ❤️ by Mihir Pal Singh
