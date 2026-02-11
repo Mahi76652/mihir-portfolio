@@ -6,7 +6,7 @@ export const personalInfo = {
   phone: '+91-7898461039',
   location: 'India',
   linkedin: 'https://www.linkedin.com/in/mihir-pal-singh-9a5537259',
-  github: 'https://github.com/mihirpalsingh',
+  github: 'https://github.com/Mahi76652',
   resumeUrl: '/resume.pdf'
 };
 
